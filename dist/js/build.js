@@ -2592,11 +2592,8 @@ Animations.prototype._undoAnimations = function($el) {
 module.exports = new Animations();
 
 }).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/animations.js","/")
-},{"./config":14,"b55mWE":5,"buffer":4,"mediatorjs":9}],11:[function(require,module,exports){
+},{"./config":15,"b55mWE":5,"buffer":4,"mediatorjs":9}],11:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
-
-
-
 /*------------------------------------*\
 	Components
 	Load all components in here.
@@ -2632,6 +2629,15 @@ Components.prototype._loadComponents = function($parent) {
 		});
 	}
 
+	// One page js
+	var $onePage = $parent.find('[data-one-page]');
+	if ($onePage.length) {
+		var OnePage = require('./components/onePage');
+		$onePage.each(function() {
+			new OnePage($(this));
+		});
+	}
+
 
 
 };
@@ -2639,7 +2645,7 @@ Components.prototype._loadComponents = function($parent) {
 module.exports = new Components();
 
 }).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/components.js","/")
-},{"./components/inViewAlert":13,"./config":14,"b55mWE":5,"buffer":4,"mediatorjs":9}],12:[function(require,module,exports){
+},{"./components/inViewAlert":13,"./components/onePage":14,"./config":15,"b55mWE":5,"buffer":4,"mediatorjs":9}],12:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 
 /*------------------------------------*\
@@ -2747,7 +2753,51 @@ InViewAlert.prototype._toggleInView = function (isInView) {
 module.exports = InViewAlert;
 
 }).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/components/inViewAlert.js","/components")
-},{"../config":14,"../utilities":17,"b55mWE":5,"buffer":4,"mediatorjs":9}],14:[function(require,module,exports){
+},{"../config":15,"../utilities":18,"b55mWE":5,"buffer":4,"mediatorjs":9}],14:[function(require,module,exports){
+(function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
+/*------------------------------------*\
+    One Page
+\*------------------------------------*/
+
+'use strict';
+
+var $ = window.$;
+var config = require('../config');
+
+// Constructor
+var OnePage = function OnePage($domElem) {
+
+	this.$elem = $domElem;
+	this.$fullpage = this.$elem;
+
+	this._init();
+};
+
+OnePage.prototype._handleOnePage = function($domElem) {
+	var _this = this;
+
+	_this.$fullpage.fullpage(
+		{
+			navigation: true,
+			navigationPosition: 'right',
+        	navigationTooltips: ['firstSlide', 'secondSlide'],
+			css3: true,
+        	scrollingSpeed: 700
+		}
+	);
+
+};
+
+// Initialise the component.
+OnePage.prototype._init = function($elem) {
+	this._handleOnePage();
+};
+
+
+module.exports = OnePage;
+
+}).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/components/onePage.js","/components")
+},{"../config":15,"b55mWE":5,"buffer":4}],15:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 /*------------------------------------*\
 	Site Config
@@ -2808,7 +2858,7 @@ var config = {
 module.exports = config;
 
 }).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/config.js","/")
-},{"b55mWE":5,"buffer":4}],15:[function(require,module,exports){
+},{"b55mWE":5,"buffer":4}],16:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 
 
@@ -2847,8 +2897,8 @@ var $example = $('.js-see-me-example');
 $example.each(function(i, elem) {
   exampleInstance = new Example($(elem));
 });
-}).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_59327fba.js","/")
-},{"./animations":10,"./components":11,"./components/example":12,"./uiEvents":16,"./utilities":17,"b55mWE":5,"buffer":4}],16:[function(require,module,exports){
+}).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_4148c54b.js","/")
+},{"./animations":10,"./components":11,"./components/example":12,"./uiEvents":17,"./utilities":18,"b55mWE":5,"buffer":4}],17:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 
 'use strict';
@@ -2914,7 +2964,7 @@ UiEvents.prototype._attachListeners = function() {
 module.exports = new UiEvents();
 
 }).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/uiEvents.js","/")
-},{"./config":14,"b55mWE":5,"buffer":4,"lodash.debounce":7,"lodash.throttle":8,"mediatorjs":9}],17:[function(require,module,exports){
+},{"./config":15,"b55mWE":5,"buffer":4,"lodash.debounce":7,"lodash.throttle":8,"mediatorjs":9}],18:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 
 /*------------------------------------*\
@@ -3051,7 +3101,7 @@ var Utilities = {
 module.exports = Utilities;
 
 }).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/utilities.js","/")
-},{"./config":14,"b55mWE":5,"buffer":4,"mediatorjs":9}]},{},[15])
+},{"./config":15,"b55mWE":5,"buffer":4,"mediatorjs":9}]},{},[16])
 
 
 //# sourceMappingURL=build.js.map

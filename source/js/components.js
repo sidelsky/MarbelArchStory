@@ -1,6 +1,3 @@
-
-
-
 /*------------------------------------*\
 	Components
 	Load all components in here.
@@ -33,6 +30,15 @@ Components.prototype._loadComponents = function($parent) {
 		var InView = require('./components/inViewAlert');
 		$inView.each(function() {
 			new InView($(this));
+		});
+	}
+
+	// One page js
+	var $onePage = $parent.find('[data-one-page]');
+	if ($onePage.length) {
+		var OnePage = require('./components/onePage');
+		$onePage.each(function() {
+			new OnePage($(this));
 		});
 	}
 
