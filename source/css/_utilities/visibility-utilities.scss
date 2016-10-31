@@ -1,0 +1,116 @@
+/*------------------------------------*\
+    VISIBILITY UTILITIES
+\*------------------------------------*/
+
+
+/* Screen reader
+ -----------------------------------*/
+.sr-only {
+    position: absolute;
+
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+
+    clip: rect(0,0,0,0);
+}
+
+
+
+/* Centering
+ -----------------------------------*/
+.center-block {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+/* Basic show/hide classes
+ -----------------------------------*/
+.hidden {
+    display: none!important;
+}
+.show {
+    display: block!important;
+}
+
+// Modernizer will add a hidden class to the HTML tag so this is here to counter that rule on the HTML tag
+html.hidden {
+    display: block!important;
+}
+
+
+
+/**
+ * Responsive hide-below
+ *
+ * Uses media max-width so will use the value specified in _variables and will hide content
+ * up to that point
+ -----------------------------------*/
+.hide-below--small {
+    @include media-max(small) {
+        display: none!important;
+    }
+}
+.hide-below--medium {
+    @include media-max(medium) {
+        display: none!important;
+    }
+}
+.hide-below--large {
+    @include media-max(large) {
+        display: none!important;
+    }
+}
+.hide-below--huge {
+    @include media-max(huge) {
+        display: none!important;
+    }
+}
+.hide-below--massive {
+    @include media-max(massive) {
+        display: none!important;
+    }
+}
+
+
+
+/**
+ * Responsive hide-above
+ *
+ * Uses media min-width so will use the value specified in _variables and will hide content
+ * from that point and above
+ -----------------------------------*/
+.hide-above--small {
+    @include media-min(small) {
+        display: none!important;
+    }
+}
+
+.hide-above--medium {
+    @include media-min(medium) {
+        display: none!important;
+    }
+}
+
+.hide-above--large {
+    @include media-min(large) {
+        display: none!important;
+    }
+}
+
+.hide-above--huge {
+    @include media-min(huge) {
+        display: none!important;
+    }
+}
+
+.hide-above--massive {
+    @include media-min(massive) {
+        display: none!important;
+    }
+}

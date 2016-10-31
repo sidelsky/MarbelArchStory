@@ -1,0 +1,83 @@
+
+@mixin media-max($media) {
+
+    @if $media == massive {
+        @media only screen and (max-width: rem($screen-massive - 1) ) {
+            @content;
+        }
+    }
+     @else if $media == huge {
+        @media only screen and (max-width: rem($screen-huge - 1) ) {
+            @content;
+        }
+    }
+
+    @else if $media == large {
+        @media only screen and (max-width: rem($screen-large - 1) ) {
+            @content;
+        }
+    }
+
+    @else if $media == medium {
+        @media only screen and (max-width: rem($screen-medium - 1) ) {
+            @content;
+        }
+    }
+
+    @else if $media == small {
+        @media only screen and (max-width: rem($screen-small - 1) ) {
+            @content;
+        }
+    }
+
+    @else {
+        @media only screen and (max-width: rem($media) ) {
+            @content;
+        }
+    }
+}
+
+@mixin media-min($media) {
+
+    @if $media == massive {
+        @media only screen and (min-width: rem($screen-massive) ) {
+            @content;
+        }
+    }
+
+     @else if $media == huge {
+        @media only screen and (min-width: rem($screen-huge) ) {
+            @content;
+        }
+    }
+
+    @else if $media == large {
+        @media only screen and (min-width: rem($screen-large) ) {
+            @content;
+        }
+    }
+
+    @else if $media == medium {
+        @media only screen and (min-width: rem($screen-medium) ) {
+            @content;
+        }
+    }
+
+    @else if $media == small {
+        @media only screen and (min-width: rem($screen-small) ) {
+            @content;
+        }
+    }
+
+    @else {
+        @media only screen and (min-width: rem($media) ) {
+            @content;
+        }
+    }
+}
+
+@mixin media-min-max($min, $max) {
+    @media only screen and (min-width: rem($min) ) and (max-width: rem($max)) {
+        @content;
+    }
+}

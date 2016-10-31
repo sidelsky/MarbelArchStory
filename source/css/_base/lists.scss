@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    LISTS
+\*------------------------------------*/
+
+
+// Dealer list
+.dealer-list {
+
+	// Local vars
+	$iconSize: 24px;
+	$chevronSize: 13px;
+
+	//font-family: $font-primary-demi;
+	text-transform: uppercase;
+
+	&__item {
+		line-height: 48px;
+		position: relative;
+
+		a {
+			color: currentColor;
+			display: inline-block;
+			text-decoration: none;
+		}
+
+	}
+
+	&__icon {
+		width: $iconSize;
+		height: $iconSize;
+		vertical-align: middle;
+		margin-right: rem(10px);
+		margin-top: rem(-1px);
+
+		&--chevron {
+			width: $chevronSize;
+			height: $chevronSize;
+			margin-left: rem(5px);
+		}
+
+	}
+
+}
+
+// Check list
+.check-list {
+	font-family: $font-primary;
+
+	&__item {
+		line-height: 35px;
+	}
+
+	&__icon {
+		width: 14px;
+		height: 10px;
+		vertical-align: middle;
+		margin-right: rem(5px);
+		margin-top: rem(-1px);
+		fill: $color-echo;
+	}
+
+	&--two-col {
+
+		// Desktop and up
+		@include media-min($screen-medium) {
+
+			.check-list__item {
+				display: inline-block;
+				float: left;
+				width: 50%;
+			}
+
+		}
+
+	}
+
+}

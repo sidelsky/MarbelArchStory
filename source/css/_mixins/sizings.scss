@@ -1,0 +1,27 @@
+
+// Converts PX to EM
+@function em($px, $base: $base-font-size) {
+    @return ( strip-unit($px) / strip-unit($base)) * 1em;
+}
+
+// Converts PX to REM
+@function rem($px, $base: $base-font-size) {
+    @return ( strip-unit($px) / strip-unit($base)) * 1rem;
+}
+
+@mixin rem-font-size($value) {
+    font-size: $value; /* add PX (or original value) as fallback */
+    font-size: rem($value);
+}
+
+// Set a line height based on the base line grid.
+// eg: line-height(18, 20) where 18 is the font size, and 20 is the next highest baseline value in multiples of $base-line-height (10)
+@mixin line-height($pxValue, $desiredBaseline) {
+    line-height: (1 / strip-unit($pxValue)) * strip-unit($desiredBaseline);
+}
+// Same as the line-height mixen, but now you can use it inline
+// eg : line-height line-height(18, 20);
+@function line-height($pxValue, $desiredBaseline) {
+    @return (1 / strip-unit($pxValue)) * strip-unit($desiredBaseline);
+}
+

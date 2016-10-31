@@ -1,0 +1,23 @@
+// Mixin for webfont
+@mixin web-font(
+  $font-name: 'FONT NAME',
+  $file-path: '/PATHTOFONT/',
+  $file-name: 'FONTNAME'
+  ){
+  $full-path: $file-path + $file-name;
+  @font-face {
+    font-family: '#{$font-name}';
+    font-style: normal;
+    font-weight: normal;
+    // IE9 Compat Modes
+    src: url('#{$full-path}.eot');
+    // IE6-IE8
+    src: url('#{$full-path}.eot?#iefix') format('embedded-opentype'),
+        // Modern Browsers
+        url('#{$full-path}.woff') format('woff'),
+        // Safari, Android, iOS
+        url('#{$full-path}.ttf') format('truetype'),
+        // Legacy iOS
+        url('#{$full-path}.svg#{$file-name}') format('svg');
+    }
+}

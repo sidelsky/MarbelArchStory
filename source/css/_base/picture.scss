@@ -1,0 +1,20 @@
+/*------------------------------------*\
+	PICTURE ELEMENT
+\*------------------------------------*/
+
+
+
+/* base
+ -----------------------------------*/
+.picture {
+	picture {
+		display: block;
+	}
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	&__inner {}
+	&__caption {}
+}

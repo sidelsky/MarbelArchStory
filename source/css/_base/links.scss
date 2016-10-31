@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    LINKS
+\*------------------------------------*/
+
+
+.play-link {
+	background: $body-background;
+	border-radius: 100%;
+	padding: 25px;
+	position: relative;
+	&:after {
+		@include play-icon();
+		content: ' ';
+		position: absolute;
+		top: 50%;
+	    left: 50%;
+    	margin-left: -5px;
+    	margin-top: -10px;
+	}
+}
+

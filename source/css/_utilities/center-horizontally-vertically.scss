@@ -1,0 +1,13 @@
+/*-----------------------------------------*\
+    Center Horizontally and Vertically
+\*-----------------------------------------*/
+
+// Add to child - parent must have either some padding top, bottom or both OR a height
+// Uses transform translate - may not work on older browsers!
+
+.center-center {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

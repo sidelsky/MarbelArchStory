@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+
+
+// Created to disbale animations
+.no-animate {
+	&, * {
+		transition: all 0s !important;
+	}
+}
+
+
+/*  Fades for lazyloaded images
+ -----------------------------------*/
+.u-fade-in {
+    opacity: 0;
+    transition: opacity 1000ms;
+    will-change: opacity;
+    &.lazyloaded {
+      opacity: 1;
+    }
+}
+
+
+/*  Bounce effect
+ -----------------------------------*/
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+	transform: translateY(0px);
+  }
+	40% {
+	transform: translateY(-10px);
+  }
+	60% {
+	transform: translateY(-5px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s ease infinite;
+}
+
+
+
+
+// Animations to be used with the animation plugin
+[data-animation] > * {
+  animation-duration: .75s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}

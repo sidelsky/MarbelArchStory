@@ -1,0 +1,8 @@
+/*------------------------------------*\
+    FONT FAMILIES
+\*------------------------------------*/
+
+$font-name: 'gotham';
+$file-path: '../fonts/#{$font-name}/';
+@include web-font('#{$font-name}-book', '#{$file-path}', '#{$font-name}-book');
+@include web-font('#{$font-name}-medium', '#{$file-path}', '#{$font-name}-medium');

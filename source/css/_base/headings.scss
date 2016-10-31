@@ -1,0 +1,66 @@
+/*----------------------------------------*\
+	HEADINGS
+
+	examples : /DevHelpers/typography.html
+\*----------------------------------------*/
+
+
+
+
+// IMPORTANT 
+// -- we are not syling direct to the element, 
+//    other than color and line-height
+h1,h2,h3,h4,h5,h6 {
+	color: inherit;
+	line-height: 1;
+}
+
+
+
+
+/* Heading sizes
+ -----------------------------------*/
+.h1 {
+	@include rem-font-size($h1-font-size);
+	@include line-height($h1-font-size , 60);
+   
+	/* "Desktop" & up
+	-----------------------------------*/
+	@include media-min($font-bp) {
+		@include rem-font-size($h1-font-size-desk);
+		@include line-height($h1-font-size-desk , 90);
+	}
+}
+
+.h2 {
+	@include rem-font-size($h2-font-size);
+	@include line-height($h2-font-size , 40);
+   
+	/* "Desktop" & up
+	-----------------------------------*/
+	@include media-min($font-bp) {
+		@include rem-font-size($h2-font-size-desk);
+		@include line-height($h2-font-size-desk , 70);
+	}
+}
+
+.h3 {
+	@include rem-font-size($h3-font-size);
+	@include line-height($h3-font-size , 40);
+   
+}
+
+.h4 {
+	@include rem-font-size($h4-font-size);
+	@include line-height($h4-font-size , 40);
+}
+
+.h5 {
+	@include rem-font-size($h5-font-size);
+	@include line-height($h5-font-size , 40);
+}
+
+.h6 {
+	@include rem-font-size($h6-font-size);
+	@include line-height($h6-font-size , 40);
+}

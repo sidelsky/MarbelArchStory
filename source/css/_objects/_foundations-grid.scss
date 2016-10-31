@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    FOUNDATION GRID - Flex
+\*------------------------------------*/
+.foundations-grid {
+	//outline: solid red 1px;
+	@include clearfix;
+
+	// Desktop and up
+	@include media-min(medium) {
+		// display: flex;
+		//  	justify-content: space-between;
+		// flex-wrap: wrap;
+
+		//display: flex;
+		// flex-direction: row;
+		// flex-wrap: wrap;
+		// justify-content: center;
+		// align-content: flex-start;
+		// align-items: flex-start;
+
+	}
+
+	&__column {
+		float: left;
+		width: 100%;
+		max-width: 100%;
+		//outline: solid green 1px;
+
+		// Desktop and up
+		@include media-min(medium) {
+			width: 50%;
+		}
+
+		// Desktop and up
+		@include media-min(large) {
+			width: 33.3333%;
+		}
+
+
+	}
+
+}

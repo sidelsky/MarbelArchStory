@@ -1,0 +1,30 @@
+/*------------------------------------*\
+	BASE STYLES
+\*------------------------------------*/
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html {
+	font-size: $base-font-size;
+	box-sizing: border-box;
+	font-size: 100%;
+}
+
+body {
+	@include rem-font-size($base-font-size);
+	@include line-height($base-font-size, 30);
+
+	color: $base-font-color;
+	font-family: $base-font;
+	font-weight: $base-font-weight;
+	background: $body-background;
+
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+
+	counter-reset: section;
+}

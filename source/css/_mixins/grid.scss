@@ -1,0 +1,29 @@
+@mixin setup-columns( $prefix, $columns ) {
+    @for $i from 1 through $columns {
+        .#{$prefix}-#{$i} {
+            @include make-column($i , $columns );
+        }
+    }
+}
+
+@mixin make-row($gutter) {
+    margin-right: ($gutter / -2);
+    margin-left: ($gutter / -2);
+}
+
+@mixin make-column-base($gutter) {
+    padding-right: ($gutter / 2);
+    padding-left: ($gutter / 2);
+}
+
+@mixin make-column( $size , $columns:12) {
+    width: 100% / $columns * $size;
+}
+
+
+@mixin push-column($number, $columns:12) {
+	margin-left: (100% / $columns * $number);
+}
+@mixin pull-column($number, $columns:12) {
+	margin-left: -(100% / $columns * $number);
+}

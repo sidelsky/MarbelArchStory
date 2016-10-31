@@ -1,0 +1,82 @@
+/*------------------------------------*\
+	IMAGES
+\*------------------------------------*/
+
+
+/* default image
+ -----------------------------------*/
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+/* Basic modifiers
+ -----------------------------------*/
+.img--center {
+	@include center-block();
+	display: block;
+}
+
+.img--full {
+	width: 100%;
+}
+
+
+/*  image wrapper class. Will flex and maintain aspect ratio. Defaults to 16x9.
+ -----------------------------------*/
+.image {
+	&__inner {
+		position: relative;
+	 	margin: 0;
+	 	padding: 0;
+	 	height: 1px;
+	 	overflow: hidden;
+	 	padding-top: 55%;
+	}
+
+	img {
+		display: block;
+ 		backface-visibility: hidden;
+ 		transform: translateZ(0) scale(1.0, 1.0);
+ 		max-width: none;
+ 		width: 100%;
+ 		height: auto;
+ 		position: absolute;
+ 		width: 100%;
+ 		height: auto;
+ 		top: 0;
+ 		left: 0;
+	}
+
+	&__caption {
+		position: absolute;
+	    bottom: 0;
+	    width: 100%;
+	}
+
+	.no-js & {
+		display: none;
+	}
+
+	&--16x9 {
+		.image__inner{
+			padding-top: 55%;
+		}
+	}
+
+	.no-js & {
+		display: none;
+	}
+}
+
+/*  Simple version with no laxy loading image for nojs. Inside noscript tag.
+ -----------------------------------*/
+.image--nojs {
+	@extend .image;
+
+	.no-js & {
+		display: block;
+	}
+}

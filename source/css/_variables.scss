@@ -1,0 +1,197 @@
+/*------------------------------------*\
+    #project variables
+\*------------------------------------*/
+
+/*  Reference
+
+	Greek alphabet naming convention: https://en.wikipedia.org/wiki/Greek_alphabet
+	TODO: A Charlie and echo has snuk in there. Need to swap these out.
+ -----------------------------------*/
+
+$header-height : 50px;
+
+$hero-banner-angle-offset: 50px;
+
+$sticky-nav         : 50px;
+$sticky-nav_desk    : 100px;
+
+
+
+/*------------------------------------*\
+    #colors
+\*------------------------------------*/
+
+
+
+$color-alpha:   		#073145; // Dark blue
+$color-beta:    		#006494; // Mid blue
+$color-charlie:			#021822; // Darker blue
+$color-gamma:   		#0582CA; // light blue
+$color-delta:			#CAA142; // Gold
+$color-echo:            #00A6ED;
+
+
+$color-success:         #2ecc71;
+$color-warning:         #e74c3c;
+// $color-danger:          #f39c12 !default;
+// $color-info:            #5faee3 !default;
+
+
+$black : #000;
+$white : #fff;
+
+
+$body-background:       	$white;
+$trans-background-alpha: 	rgba(7, 49, 69, .9);
+
+
+
+/*------------------------------------*\
+    #Grays
+
+\*------------------------------------*/
+$gray-q:	#252618;
+$gray-w: 	#5B5B5B;
+$gray-e: 	#F2F2F2;
+$gray-r: 	#9B9B9B;
+$gray-t: 	#EEEEEE;
+$gray-y: 	lighten($black, 95%); // #f2f2f2
+$gray-u: 	lighten($black, 98%); // #fafafa
+$gray-i:    #dadada;
+
+
+/*------------------------------------*\
+    #Colour backgrounds
+
+\*------------------------------------*/
+$medium-background: $gray-y;
+$dark-background: $color-alpha;
+
+
+
+
+/*------------------------------------*\
+    #Colour tints
+
+\*------------------------------------*/
+$tint-z: 	#99b3bb; // Light alpha blue
+
+
+
+/*------------------------------------*\
+    #Fonts
+    - Book
+    - Demi - Base for headings
+    - Heavy - Used on large headings
+\*------------------------------------*/
+$font-primary: 'gotham-book', Helvetica, Arial, sans-serif;
+$font-primary-medium: 'gotham-medium', Helvetica, Arial, sans-serif;
+//$font-primary-light: 'gotham-light', Helvetica, Arial, sans-serif;
+//$font-primary-demi: 'gotham-book', Helvetica, Arial, sans-serif;
+//$font-primary-heavy: 'gotham-bold', Helvetica, Arial, sans-serif;
+
+
+
+
+
+/*------------------------------------*\
+    #Base
+\*------------------------------------*/
+$base-line              : 10px; //used to work out line height of font text with mixins
+$base-font-size         : 16px; // font size
+
+$base-font-size-big     : 22px;
+$base-font-size-big--m  : 18px;
+
+$base-font-size-small   : 10px;
+
+$base-font 				: $font-primary; // Book
+$base-font-color        : $color-alpha;
+$base-font-weight       : 400;
+
+$base-weight-strong     : 600; // Demi
+$base-variant-alt       : italic; // used on the <em> element
+
+
+
+
+/*------------------------------------*\
+    #transitions
+\*------------------------------------*/
+$transition-duration        : .3s;
+$transition-timing 			: ease;
+$transition 				: $transition-duration $transition-timing;
+
+$transition-all     : all $transition !default;
+$transition-bg      : background $transition !default;
+$transition-color   : color $transition !default;
+
+
+
+
+/*------------------------------------*\
+    #Media Queries
+\*------------------------------------*/
+$screen-small   : 320px;
+$screen-mini   	: 450px;
+$screen-medium  : 660px;
+$screen-large   : 1000px;
+$screen-huge    : 1280px;
+$screen-massive : 1440px;
+$screen-mega-massive : 1800px;
+
+// The brakpoint for fonts
+$font-bp        :  $screen-medium;
+
+
+
+
+/*------------------------------------*\
+    #Grid
+\*------------------------------------*/
+$container-max-size : 86%;
+
+$columns-small      : 4;
+$columns-medium     : 8;
+$columns-large      : 12;
+
+
+$grid-gutter        : 20px;
+
+$grid-gutter-small  : 20px;
+$grid-gutter-large  : 20px;
+
+
+$grid-gutter-half   : ($grid-gutter / 2);
+$container-gutter	: 3%;
+
+
+
+
+/*------------------------------------*\
+    #Headings
+\*------------------------------------*/
+$h1-font-size       : 50px;
+$h1-font-size-desk  : 80px;
+
+$h2-font-size       : 35px;
+$h2-font-size-desk  : 60px;
+
+
+$h3-font-size   : 25px !default;
+$h4-font-size   : 25px !default;
+$h5-font-size   : 25px !default;
+$h6-font-size   : 25px !default;
+
+
+
+
+
+/*------------------------------------*\
+    #Z-index map
+\*------------------------------------*/
+$z-site-wrapper   : 1;
+$z-site-header    : 600;
+$z-stcky-nav      : ($z-site-header - 1);
+$z-site-footer    : 100;
+$z-site-body      : 200;

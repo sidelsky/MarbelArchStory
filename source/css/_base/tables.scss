@@ -1,0 +1,104 @@
+/*------------------------------------*\
+    TABLES
+\*------------------------------------*/
+
+// This can wrap your table allowing it to scoll x on mobile
+.table-container {
+	-webkit-overflow-scrolling: touch;
+	min-width: 320px;
+	overflow-x: scroll;
+}
+
+.table {
+	border-collapse: separate;
+	display: table;
+	text-align: left;
+	width: 100%;
+
+	thead {
+		display: table-header-group;
+		//font-family: $font-primary-demi;
+		vertical-align: middle;
+	}
+
+	tbody {
+		display: table-row-group;
+		vertical-align: middle;
+
+		tr:nth-child(odd) {
+		   background-color: rgba($gray-r, .25);
+	   }
+
+	}
+
+	tfoot {
+		display: table-footer-group;
+		vertical-align: middle;
+	}
+
+	col {
+		display: table-column;
+	}
+
+	colgroup {
+		display: table-column-group;
+	}
+
+	tr {
+		display: table-row;
+		vertical-align: middle;
+	}
+
+	td, th {
+		display: table-cell;
+		padding: rem(10px);
+		vertical-align: inherit;
+	}
+
+	caption {
+		display: table-caption;
+		text-align: -webkit-center
+	}
+
+	// Add your modifications here (Change modify-me to your mod name)
+	&--modify-me {
+
+	}
+
+}
+
+
+// Large data Table
+.table {
+
+	&--large-data {
+		@include rem-font-size(16px);
+		line-height: line-height(16px, 60);
+
+		// Desktop & up
+		@include media-min($screen-medium) {
+			@include rem-font-size(24px);
+			line-height: line-height(24px, 60);
+		}
+
+	}
+
+	&--row {
+
+		&:nth-child(odd) {
+		   background-color: $white !important;
+	   }
+
+	}
+
+	&--description {
+		padding-left: em(20px) !important;
+	}
+
+	&--figure {
+		padding-right: em(20px) !important;
+		//font-family: $font-primary-demi;
+		text-align: right;
+	}
+
+}

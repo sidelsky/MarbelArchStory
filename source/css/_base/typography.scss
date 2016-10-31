@@ -1,0 +1,70 @@
+/*----------------------------------------*\
+	TYPEOGRAPHY
+
+	examples : /DevHelpers/typography.html
+\*----------------------------------------*/
+
+
+
+
+/* Paragraph
+ -----------------------------------*/
+p {
+    // null
+}
+
+.small {
+    // null
+}
+
+.lead {
+	@include rem-font-size($base-font-size-big--m);
+	@include line-height($base-font-size-big--m, 30);
+
+	@include media-min( medium ) {
+		@include rem-font-size($base-font-size-big);
+		@include line-height($base-font-size-big, 30);
+	}
+}
+
+
+
+
+/* Paragraph inline elements
+ -----------------------------------*/
+mark {
+	padding: 0 em(3px);
+	background: lighten($color-alpha, 35%);
+}
+
+s, strike, del {
+	text-decoration: line-through;
+}
+
+ins, u {
+	text-decoration: underline;
+}
+
+em {
+	font-style: $base-variant-alt;
+}
+
+strong {
+	// /font-family: $font-primary-demi;
+}
+
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.vh {
+  	border: 0 !important;
+	clip: rect(0 0 0 0) !important;
+	height: 0.05rem !important;
+	margin: -0.05rem !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 0.05rem !important;
+}

@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    SPACING & MARGINS
+\*------------------------------------*/
+
+
+.padding-base-1 {
+
+	&--top {
+		padding-top: em(20px);
+	}
+
+	&--top-bottom {
+		padding: em(20px) 0;
+	}
+
+	&--bottom {
+		padding-bottom: em(20px);
+	}
+
+}
+
+.padding-base-2 {
+
+	&--top {
+		padding-top: em(40px);
+	}
+
+	&--top-bottom {
+		padding: em(40px) 0;
+	}
+
+	&--bottom {
+		padding-bottom: em(40px);
+	}
+
+}
+
+
+.padding-base-3 {
+
+	&--top {
+		padding-top: em(60px);
+	}
+
+	&--top-bottom {
+		padding: em(60px) 0;
+	}
+
+	&--bottom {
+		padding-bottom: em(60px);
+	}
+
+}
+
+
+.border {
+	margin: em(60px) 0 0 0;
+	padding: em(60px) 0 0 0;
+
+	&--top {
+		border-top: solid 1px $gray-i;
+	}
+
+}

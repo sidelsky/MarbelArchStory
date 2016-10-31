@@ -1,0 +1,40 @@
+<!doctype html>
+<!--[if IE 9 ]> <html class="no-js old-ie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- only required if you are supporting IE9 and below -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- prevents skype from changing all numbers to skyp buttons -->
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+
+    <title>{{#if title}}{{title}}{{else}}Index{{/if}} | New project</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+
+    <script src="/js/custom-modernizr.js"></script>
+
+</head>
+<body class="js_site_is_loaded">
+    <div style="position: absolute;height: 0;width: 0; overflow: hidden">{{> svg-defs}}</div>
+
+	<div class="site-wrapper">
+
+		{{> siteHeader}}
+
+		<main class="site-body">
+		    {% body %}
+		</main>
+
+		{{> siteFooter}}
+
+	</div>
+
+    <script src="/js/vendor.js"></script>
+    <script src="/js/build.js"></script>
+
+</body>
+</html>

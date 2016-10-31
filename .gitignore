@@ -1,0 +1,59 @@
+# GIT IGNORE FILE
+_ReSharper.*
+*.suo
+*.user
+[Oo]bj
+*.cache
+bin
+/Databases/Personal/*.mdf
+/Databases/Personal/*.ldf
+*.orig
+*.sln.DotSettings.user
+/*.dll
+/*.xml
+/*.pdb
+/packages
+_NCrunch_Suzuki/*
+*nCrunchTemp*
+/artifacts/*
+GitExtensions.settings
+
+# Ignore mac files
+.DS_Store
+
+# FRONTEND ASSETS EXCLUDED FROM .SITE
+/src/Suzuki.Site/css
+/src/Suzuki.Site/js
+/src/Suzuki.Site/images
+/src/Suzuki.Site/static/**/*
+
+# UMBRACO SPECIFIC files
+/src/Suzuki.Site/App_Data/Umbraco.config
+/src/Suzuki.Site/App_Data/NuGetBackUp
+/src/Suzuki.Site/App_Data/Logs
+/src/Suzuki.Site/App_Data/Temp
+src/Suzuki.Site/App_Data/preview
+src/Suzuki.Site/App_Data/umbraco.licensing.log.txt
+src/Suzuki.Site/Assets
+/src/Suzuki.Site/App_Data/Cache/*
+/src/Suzuki.Site/uSync/data/Content/cars/**/
+!/src/Suzuki.Site/uSync/data/Content/cars/data/
+!/src/Suzuki.Site/uSync/data/Content/cars/data/*
+!/src/Suzuki.Site/uSync/data/Content/cars/data/*/*
+!/src/Suzuki.Site/uSync/data/Content/cars/data/*/*/*
+!/src/Suzuki.Site/uSync/data/Content/cars/data/*/*/*/*
+!/src/Suzuki.Site/uSync/data/Content/cars/data/*/*/*/*/*
+
+
+#EXCLUDE FRONTEND NODE PLUGINS FROND .FrontEnd
+/src/Suzuki.FrontEnd/mockapi
+/src/Suzuki.FrontEnd/node_modules
+/src/Suzuki.FrontEnd/.sass-cache
+/src/Suzuki.FrontEnd/dist/**/*
+/src/Suzuki.FrontEnd/npm-debug.log
+/src/Suzuki.FrontEnd/dist/**/*
+/src/Suzuki.FrontEnd/source/html/partials/fileList.hbs
+/src/Suzuki.Site/Media/**/
+
+
+.vs/config/applicationhost.config
