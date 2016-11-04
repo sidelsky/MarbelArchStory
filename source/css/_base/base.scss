@@ -6,6 +6,10 @@
 	box-sizing: inherit;
 }
 
+html, body {
+    height:100%;
+}
+
 html {
 	font-size: $base-font-size;
 	box-sizing: border-box;

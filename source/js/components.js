@@ -42,8 +42,43 @@ Components.prototype._loadComponents = function($parent) {
 		});
 	}
 
+	// One page js
+	var $scrollMagic = $parent.find('[data-magic]');
+	if ($scrollMagic.length) {
+		var scrollMagic = require('./components/scrollMagic');
+		$scrollMagic.each(function() {
+			new scrollMagic($(this));
+		});
+	}
+
 
 
 };
 
 module.exports = new Components();
+
+
+(function(){
+
+	var s = skrollr.init({
+		forceHeight: false,
+		smoothScrolling: true,
+		mobileDeceleration: 0.004,
+		easing: {
+			  //This easing will sure drive you crazy
+			  wtf: Math.random,
+			  inverted: function(p) {
+				return 1 - p;
+			  }
+			},
+			render: function(data) {
+				var $data = $('#data');
+				$data.text(data.curTop);
+		  }
+		});
+
+		window.onload=function(){
+			s.refresh()
+		};
+
+}());

@@ -21,11 +21,15 @@ OnePage.prototype._handleOnePage = function($domElem) {
 
 	_this.$fullpage.fullpage(
 		{
+			verticalCentered: true,
 			navigation: true,
 			navigationPosition: 'right',
         	navigationTooltips: ['firstSlide', 'secondSlide'],
 			css3: true,
-        	scrollingSpeed: 700
+        	scrollingSpeed: 700,
+			autoScrolling: false,
+			fitToSection: false,
+			//normalScrollElements: '#scene1'
 		}
 	);
 

@@ -21,17 +21,14 @@
 <body class="js_site_is_loaded">
     <div style="position: absolute;height: 0;width: 0; overflow: hidden">{{> svg-defs}}</div>
 
-	<div class="site-wrapper">
+	<!-- Data and progress info -->
+	<div id="data" class="data">0</div>
+	<div id="progress-bar" class="progress-bar"
+	  data-0="width: 0%;"
+	  data-end="width: 100%"
+	  ></div>
 
-		{{> siteHeader}}
-
-		<main class="site-body">
-		    {% body %}
-		</main>
-
-		{{> siteFooter}}
-
-	</div>
+	{% body %}
 
     <script src="/js/vendor.js"></script>
     <script src="/js/build.js"></script>

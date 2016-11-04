@@ -1,0 +1,33 @@
+{
+    "navigation": [
+        {
+            "title": "A Triumphal Arch",
+            "sceneID": "scene1"
+        },
+        {
+            "title": "A Sculptural Puzzle",
+            "sceneID": "scene2"
+        },
+        {
+            "title": "What Happened to the Rest of the Sculpture?",
+            "sceneID": "scene3"
+        },
+        {
+            "title": "A New Home for Marble Arch",
+            "sceneID": "scene4"
+        },
+        {
+            "title": "Poem by Sir John Betjeman ",
+            "sceneID": "scene7"
+        },
+        {
+            "title": "Acknowledgements ",
+            "sceneID": "scene8"
+        }
+    ],
+
+    "imageData": {
+        "backgroundImage": "scene2/scene2.jpg"
+    }
+
+}

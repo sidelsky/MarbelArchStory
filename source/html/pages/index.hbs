@@ -1,13 +1,58 @@
-<div id="fullpage" data-one-page>
-	<div class="section">Some section</div>
-	<div class="section">Some section</div>
-	<div class="section">Some section</div>
-	<div class="section">Some section</div>
+<!-- START: Content -->
+<div class="content" id="skrollr-body">
+
+	<!-- Scene 1 -->
+	{{#scene1}}
+		{{>scene1pageContent pageContent}}
+	{{/scene1}}
+
+	<!-- Scene 2 -->
+	{{>scene2pageContent}}
+
+	<!-- Scene 3 -->
+	{{#scene3}}
+		{{>scene3pageContent pageContent}}
+	{{/scene3}}
+
+	<!-- Scene 4 -->
+	{{>scene4pageContent}}
+
+	<!-- Scene 5 -->
+	{{>scene5pageContent}}
+
+	<!-- Scene 6 -->
+	{{>scene6pageContent}}
+
+	<!-- Scene 7 -->
+	{{>scene7pageContent}}
+
 </div>
 
+<!-- START: Background images -->
 
-
-
+<!-- Scene 1 -->
 {{#scene1}}
-	{{> pageContent}}
+	{{>scene1backgroundImage imageData}}
 {{/scene1}}
+
+<!-- Scene 2 -->
+{{#scene2}}
+	{{>scene2backgroundImage imageData}}
+{{/scene2}}
+
+<!-- Scene 3 -->
+{{#scene3}}
+	{{>scene3backgroundImage imageData}}
+{{/scene3}}
+
+<!-- Scene 4 -->
+{{>scene4backgroundImage}}
+
+<!-- Scene 5 -->
+{{>scene5backgroundImage}}
+
+<!-- Scene 6 -->
+{{>scene6backgroundImage}}
+
+<!-- Scene 7 -->
+{{>scene7backgroundImage}}

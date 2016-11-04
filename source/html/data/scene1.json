@@ -1,6 +1,12 @@
 {
     "pageContent": {
         "title": "The Story of Marble Arch",
-        "backgroundImage":
+        "subTitle": "Begin",
+        "anchor": "#scene2"
+    },
+
+    "imageData": {
+        "backgroundImage": "scene1/scene1.jpg"
     }
+
 }

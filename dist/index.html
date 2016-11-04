@@ -24,6 +24,10 @@
       <title>add icon</title>
        <g fill-rule="evenodd"> <path d="M16 0C7.178 0 0 7.177 0 16s7.178 16 16 16 16-7.177 16-16S24.822 0 16 0zm0 30.77C7.857 30.77 1.23 24.142 1.23 16S7.858 1.23 16 1.23 30.77 7.858 30.77 16 24.142 30.77 16 30.77z"/> <path d="M23.692 15.385h-7.077v-6.77c0-.34-.275-.615-.615-.615-.34 0-.615.275-.615.615v6.77H8.308c-.34 0-.616.275-.616.615 0 .34.276.615.616.615h7.077V24c0 .34.275.615.615.615.34 0 .615-.275.615-.615v-7.385h7.077c.34 0 .616-.275.616-.615 0-.34-.276-.615-.616-.615z"/> </g> 
     </symbol>
+    <symbol id="arrow-point-to-down" viewBox="0 0 404.308 404.309">
+      <title>arrow-point-to-down icon</title>
+       <g> <path d="M0,101.08h404.308L202.151,303.229L0,101.08z" fill="#FFFFFF"/> </g>                
+    </symbol>
     <symbol id="brochure" viewBox="0 0 32 32">
       <title>brochure icon</title>
        <path d="M16 6c0 0-4-4-16-4v24c12.125 0 16 4 16 4s3.875-4 16-4v-24c-12 0-16 4-16 4zM4 6c5.084 0.426 8.203 1.602 10 2.555v16.109c-1.797-0.949-4.916-2.125-10-2.555v-16.109zM28 22.109c-5.086 0.43-8.203 1.604-10 2.555v-16.109c1.797-0.953 4.914-2.129 10-2.555v16.109z"/> 
@@ -164,38 +168,253 @@
       <path d="M95.201 25.538c-1.186-5.152-5.4-8.953-10.473-9.52-12.013-1.341-24.172-1.348-36.275-1.341-12.105-.007-24.266 0-36.279 1.341-5.07.567-9.281 4.368-10.467 9.52C.019 32.875 0 40.884 0 48.438 0 55.992 0 64 1.688 71.336c1.184 5.151 5.396 8.952 10.469 9.52 12.012 1.342 24.172 1.349 36.277 1.342 12.107.007 24.264 0 36.275-1.342 5.07-.567 9.285-4.368 10.471-9.52 1.689-7.337 1.695-15.345 1.695-22.898 0-7.554.014-15.563-1.674-22.9zM35.936 63.474V31.437c10.267 5.357 20.466 10.678 30.798 16.068-10.3 5.342-20.504 10.631-30.798 15.969z" fill="#FFF"/>
     </symbol></svg></div>
 
-	<div class="site-wrapper">
+	<!-- Data and progress info -->
+	<div id="data" class="data">0</div>
+	<div id="progress-bar" class="progress-bar"
+	  data-0="width: 0%;"
+	  data-end="width: 100%"
+	  ></div>
 
-		<!-- START : Site header -->
-		<header class="site-header">
-			<div class="site-header__inner">
-				This is the site header
-			</div>
-		</header>
-		<!-- END : Site header -->
+	<!-- START: Content -->
+<div class="content" id="skrollr-body">
 
-		<main class="site-body">
-		    <div id="fullpage" data-one-page>
-	<div class="section">Some section</div>
-	<div class="section">Some section</div>
-	<div class="section">Some section</div>
-	<div class="section">Some section</div>
-</div>
+	<!-- Scene 1 -->
+		<!-- START : component -->
+		<div id="scene1" class="scene section">
+		
+		    <div class="section__content">
+		
+		        <h1 class="section__title"
+		        data-center="opacity: 1;"
+		        data-top="opacity: 0;"
+		        >The Story of Marble Arch
+		            <a class="section__sub-title" href="#scene2">Begin
+		                <svg class="icon section__sub-title__icon">
+		                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-point-to-down" viewBox="0 0 32 32"></use>
+		                </svg>
+		            </a>
+		        </h1>
+		
+		    </div>
+		
+		</div>
+		<!-- END : component -->
 
-
-
-
+	<!-- Scene 2 -->
 	<!-- START : component -->
-	        <h1>The Story of Marble Arch</h1>
+	<div id="scene2" class="scene section">
+	
+	    <div class="section__content">
+	
+	        <ul class="menu"
+	        data-bottom-top="opacity: 0;"
+	        data-center="opacity: 1;"
+	        data-top-bottom="opacity: 0;"
+	        >
+	            <li class="menu__item"><a class="menu__link" href="#scene2">A Triumphal Arch</a></li>
+	            <li class="menu__item"><a class="menu__link" href="#scene3">A Sculptural Puzzle</a><li>
+	            <li class="menu__item"><a class="menu__link" href="#scene4">What Happened to the Rest of the Sculpture?</a><li>
+	            <li class="menu__item"><a class="menu__link" href="#scene5">A New Home for Marble Arch</a><li>
+	            <li class="menu__item"><a class="menu__link" href="#scene6">Today’s Arch</a><li>
+	            <li class="menu__item"><a class="menu__link" href="#scene7">Common Myths</a><li>
+	            <li class="menu__item"><a class="menu__link" href="#scene8">Poem by Sir John Betjeman </a><li>
+	            <li class="menu__item"><a class="menu__link" href="#scene9">Acknowledgements</a><li>
+	        </ul>
+	
+	    </div>
+	
+	</div>
 	<!-- END : component -->
 
-		</main>
+	<!-- Scene 3 -->
+		<!-- START : component -->
+		<div id="scene3" class="scene section">
+		
+		    <div class="section__content">
+		
+		        <div class="section__content__inner section__content__inner--right-50"
+		        data-bottom-top="opacity: 0;"
+		        data-center="opacity: 1;"
+		        data-top-bottom="opacity: 0;"
+		        >
+		            <h1 class="section__content__inner--title">Discover the truth behind one of London’s most recognisable landmarks as we uncover the story of Marble Arch
+		                <span class="caption">Marble Arch after 1908. Reproduced by permission Historic England Archive.</span>
+		            </h1>
+		
+		        </div>
+		
+		    </div>
+		
+		</div>
+		<!-- END : component -->
 
-		<footer class="site-footer">
-		    This is the site footer
-		</footer>
-
+	<!-- Scene 4 -->
+	<!-- START : component -->
+	<div id="scene4" class="scene section">
+	
+	    <div class="section__content"
+	    data-bottom-top="opacity: 0;"
+	    data-center="opacity: 1;"
+	    data-top-bottom="opacity: 0;"
+	    >
+	
+	        <div class="section__content__inner section__content__inner--left-50">
+	
+	            <h1 class="color--green title">A Triumphal Arch</h1>
+	
+	            <p class="section__content__inner--title smaller dark-copy">John Nash (1752-1835) was the favoured architect of the Prince Regent, later King George IV. Under George’s auspices Nash designed and planned such landmarks as Regent’s Park, Regent Street, Carlton House Terrace, much of Buckingham Palace and Marble Arch. Marble Arch was designed to be both a grandiose gateway to an expanded Buckingham Palace and an exuberant celebration of British victories in the Napoleonic Wars – a Triumphal Arch. But the Grade I listed Arch that we see today is nowhere near as grand as Nash originally intended.</p>
+	
+	        </div>
+	
+	        <div class="section__content__inner section__content__inner--right-50">
+	
+	            <div class="section__content__inner--title smaller dark-copy">
+	                <img src="/images/scenes/scene4/scene4-sub-image.jpg" alt="Buckingham Palace" />
+	                <span class="caption">Buckingham Palace: the east front from St James’s Park by Joseph Nash 1846 with permission from Royal Collection Trust © Her Majesty Queen Elizabeth II 2016.</span>
+	            </div>
+	
+	        </div>
+	
+	    </div>
+	
 	</div>
+	<!-- END : component -->
+
+	<!-- Scene 5 -->
+	<!-- START : component -->
+	<div id="scene5" class="scene section">
+	
+	    <div class="section__content"
+	    data-bottom-top="opacity: 0;"
+	    data-center="opacity: 1;"
+	    data-top-bottom="opacity: 0;"
+	    >
+	
+	        <div class="section__content__inner section__content__inner--left-50">
+	            <div class="section__content__inner--title smaller dark-copy">
+	                <p>This model, now in the Victoria and Albert Museum, gives an impression of how Marble Arch might have looked. Nash had it made to illustrate his intended design to George IV. </p>
+	                <p>Bristling with sculpture, including an imposing equestrian statue of George IV crowning the structure, the overall design was approved and sculptures were commissioned in 1828.</p>
+	                <p>Had George IV lived a little longer we would certainly have a very different Marble Arch today.</p>
+	            </div>
+	
+	        </div>
+	
+	        <div class="section__content__inner section__content__inner--right-50">
+	
+	            <div class="section__content__inner--title smaller dark-copy">
+	                <img src="/images/scenes/scene5/scene5-sub-image.jpg" alt="Architectural model of Marble Arch" />
+	                <span class="caption">Architectural model of Marble Arch c.1826 © Victoria and Albert Museum, London.</span>
+	            </div>
+	
+	        </div>
+	
+	    </div>
+	
+	</div>
+	<!-- END : component -->
+
+	<!-- Scene 6 -->
+	<!-- START : component -->
+	<div id="scene6" class="scene section">
+	
+	    <div class="section__content"
+	    data-bottom-top="opacity: 0;"
+	    data-center="opacity: 1;"
+	    data-top-bottom="opacity: 0;"
+	    >
+	
+	        <div class="section__content__inner section__content__inner--left-50">
+	            <div class="section__content__inner--title smaller">
+	                <p>By 1830 most of the statues and panels were complete and Nash’s work at Buckingham Palace and on the Arch was progressing. And then the King died. </p>
+	                <p>Shortly after the King’s death Nash was sacked by the Prime Minister, the Duke of Wellington, for overspending on the project. The architect Edward Blore was commissioned to complete the works in a more economic and practical fashion. </p>
+	            </div>
+	
+	        </div>
+	
+	    </div>
+	
+	</div>
+	<!-- END : component -->
+
+	<!-- Scene 7 -->
+	<!-- START : component -->
+	<div id="scene7" class="scene section">
+	
+	    <div class="section__content"
+	    data-bottom-top="opacity: 0;"
+	    data-center="opacity: 1;"
+	    data-top-bottom="opacity: 0;"
+	    >
+	
+	        <div class="section__content__inner section__content__inner--left-50">
+	            <div class="section__content__inner--title smaller">
+	                <p>Finding himself in possession of a jumbled collection of statues and panels, Blore tried to get Nash to provide drawings to explain how the jigsaw was intended to fit together but Nash, unhappy about his dismissal, would not cooperate.</p>
+	                <p>All Blore really had to go on was Nash’s model and the assortment of sculptures in his yard.</p>
+	            </div>
+	
+	        </div>
+	
+	    </div>
+	
+	</div>
+	<!-- END : component -->
+
+</div>
+
+<!-- START: Background images -->
+
+<!-- Scene 1 -->
+	<!-- Background Images -->
+	<div class="scene-bg scene-bg--1"
+		data-0="opacity: 1;"
+		data-100p="opacity: 0;"
+		style="background-image: url('/images/scenes/scene1/scene1.jpg');
+	"></div>
+
+<!-- Scene 2 -->
+	<!-- Background Images -->
+	<div class="scene-bg scene-bg--2"
+		data-100p="opacity: 1;"
+		data-200p="opacity: 0;"
+		style="background-image: url('/images/scenes/scene2/scene2.jpg');
+	"></div>
+
+<!-- Scene 3 -->
+	<!-- Background Images -->
+	<div class="scene-bg scene-bg--3"
+		data-200p="opacity: 1;"
+		data-300p="opacity: 0;"
+		style="background-image: url('/images/scenes/scene3/scene3.jpg');
+	"></div>
+
+<!-- Scene 4 -->
+<!-- Background Images -->
+<div class="scene-bg scene-bg--4 background-color--white"
+	data-300p="opacity: 1;"
+	data-400p="opacity: 0;"></div>
+
+<!-- Scene 5 -->
+<!-- Background Images -->
+<div class="scene-bg scene-bg--5 background-color--white"
+	data-400p="opacity: 1;"
+	data-500p="opacity: 0;"></div>
+
+<!-- Scene 6 -->
+<!-- Background Images -->
+<div class="scene-bg scene-bg--6"
+	data-500p="opacity: 1;"
+	data-600p="opacity: 0;"
+	style="background-image: url('/images/scenes/scene6/scene6.jpg')";
+	></div>
+
+<!-- Scene 7 -->
+<!-- Background Images -->
+<div class="scene-bg scene-bg--7"
+	data-600p="opacity: 1;"
+	data-700p="opacity: 0;"
+	style="background-image: url('/images/scenes/scene7/scene7.jpg')";
+	></div>
+
 
     <script src="/js/vendor.js"></script>
     <script src="/js/build.js"></script>
