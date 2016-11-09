@@ -13,13 +13,37 @@
 
     <title>{{#if title}}{{title}}{{else}}Index{{/if}} | New project</title>
 
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 
-    <script src="/js/custom-modernizr.js"></script>
+    <!-- <script src="/js/custom-modernizr.js"></script> -->
 
 </head>
-<body class="js_site_is_loaded">
-    <div style="position: absolute;height: 0;width: 0; overflow: hidden">{{> svg-defs}}</div>
+<body class="loading">
+
+	<div id="preload">
+       	<img src="images/scenes/scene1/scene1.jpg">
+		<img src="images/scenes/scene2/scene2.jpg">
+		<img src="images/scenes/scene3/scene3.jpg">
+		<img src="images/scenes/scene4/scene4-sub-image.jpg">
+        <img src="images/scenes/scene5/scene5-sub-image.jpg">
+        <img src="images/scenes/scene6/scene6.jpg">
+        <img src="images/scenes/scene7/scene7.jpg">
+        <img src="images/scenes/scene8/scene8.jpg">
+        <img src="images/scenes/scene9/scene9-sub-image.jpg">
+        <img src="images/scenes/scene10/scene10.jpg">
+        <img src="images/scenes/scene11/scene11.jpg">
+        <img src="images/scenes/scene12/scene12.jpg">
+        <!-- No scene 13 image -->
+        <img src="images/scenes/scene14/scene14-sub-image.jpg">
+        <img src="images/scenes/scene15/scene15-sub-image.jpg">
+        <img src="images/scenes/scene16/scene16-sub-image.jpg">
+        <img src="images/scenes/scene17/scene17-sub-image.jpg">
+        <img src="images/scenes/scene18/scene18.jpg">
+        <img src="images/scenes/scene19/scene19.jpg">
+        <img src="images/scenes/scene20/scene20.jpg">
+   	</div>
+
+    <div style="position: absolute; height: 0; width: 0; overflow: hidden">{{> svg-defs}}</div>
 
 	<!-- Data and progress info -->
 	<div id="data" class="data">0</div>
@@ -28,10 +52,19 @@
 	  data-end="width: 100%"
 	  ></div>
 
-	{% body %}
+	  {% body %}
 
-    <script src="/js/vendor.js"></script>
-    <script src="/js/build.js"></script>
+
+    <div class="spinner-container">
+        <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+    </div>
+
+    <script src="js/vendor.js"></script>
+    <script src="js/build.js"></script>
 
 </body>
 </html>

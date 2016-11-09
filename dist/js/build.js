@@ -2677,6 +2677,47 @@ module.exports = new Components();
 			s.refresh()
 		};
 
+
+
+		// Setup variables
+		$window = $(window);
+		$slide = $('.homeSlide');
+		$body = $('body');
+
+		//FadeIn all sections
+		$body.imagesLoaded( function() {
+			setTimeout(function() {
+
+				  // Resize sections
+				  adjustWindow();
+
+				  // Fade in sections
+				  $body.removeClass('loading').addClass('loaded');
+
+			}, 800);
+		});
+
+		function adjustWindow(){
+
+			// Init Skrollr
+
+
+			// Get window size
+			winH = $window.height();
+
+			// Keep minimum height 550
+			if(winH <= 550) {
+				winH = 550;
+			}
+
+			// Resize our slides
+			$slide.height(winH);
+
+			// Refresh Skrollr after resizing our sections
+
+
+		}
+
 }());
 
 }).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/components.js","/")
@@ -2971,7 +3012,7 @@ var $example = $('.js-see-me-example');
 $example.each(function(i, elem) {
   exampleInstance = new Example($(elem));
 });
-}).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_ad663e41.js","/")
+}).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_7506e35b.js","/")
 },{"./animations":10,"./components":11,"./components/example":12,"./uiEvents":18,"./utilities":19,"b55mWE":5,"buffer":4}],18:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 
