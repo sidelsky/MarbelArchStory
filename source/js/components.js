@@ -122,4 +122,43 @@ module.exports = new Components();
 
 		}
 
+        // main-menu-container
+
+        var $menu = $('.menu'),
+            $menuItem = $menu.find('.menu__item'),
+            $this = $(this);
+
+            //console.log($menuItem);
+
+            $menuItem.hover(function(){
+                $(this).parent().children().not(this).stop().addClass('js-active');
+            }, function(){
+                $(this).parent().children().not(this).stop().removeClass('js-active');
+            });
+
+
+		function do_scrollTo() {
+
+            $.extend($.easing, {
+              def: 'easeInOutQuart',
+                easeInOutQuart: function (x, t, b, c, d) {
+                  if ((t /= d / 2) < 1) return c / 2 * t * t * t * t + b;
+                  return -c / 2 * ((t -= 2) * t * t * t - 2) + b;
+                }
+              });
+
+		  $('a[href*=\\#]:not([href=\\#])').on('click',function (e) {
+		    e.preventDefault();
+
+		    var target = this.hash;
+		    $target = $(target);
+
+		    $('html, body').stop().animate({
+		      'scrollTop': $target.offset().top
+          }, 800, 'easeInOutQuart');
+		  });
+		}
+
+        do_scrollTo();
+
 }());

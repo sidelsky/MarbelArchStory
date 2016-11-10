@@ -2718,6 +2718,45 @@ module.exports = new Components();
 
 		}
 
+        // main-menu-container
+
+        var $menu = $('.menu'),
+            $menuItem = $menu.find('.menu__item'),
+            $this = $(this);
+
+            //console.log($menuItem);
+
+            $menuItem.hover(function(){
+                $(this).parent().children().not(this).stop().addClass('js-active');
+            }, function(){
+                $(this).parent().children().not(this).stop().removeClass('js-active');
+            });
+
+
+		function do_scrollTo() {
+
+            $.extend($.easing, {
+              def: 'easeInOutQuart',
+                easeInOutQuart: function (x, t, b, c, d) {
+                  if ((t /= d / 2) < 1) return c / 2 * t * t * t * t + b;
+                  return -c / 2 * ((t -= 2) * t * t * t - 2) + b;
+                }
+              });
+
+		  $('a[href*=\\#]:not([href=\\#])').on('click',function (e) {
+		    e.preventDefault();
+
+		    var target = this.hash;
+		    $target = $(target);
+
+		    $('html, body').stop().animate({
+		      'scrollTop': $target.offset().top
+          }, 800, 'easeInOutQuart');
+		  });
+		}
+
+        do_scrollTo();
+
 }());
 
 }).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/components.js","/")
@@ -3012,7 +3051,7 @@ var $example = $('.js-see-me-example');
 $example.each(function(i, elem) {
   exampleInstance = new Example($(elem));
 });
-}).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_7506e35b.js","/")
+}).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_b403cf2e.js","/")
 },{"./animations":10,"./components":11,"./components/example":12,"./uiEvents":18,"./utilities":19,"b55mWE":5,"buffer":4}],18:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 
