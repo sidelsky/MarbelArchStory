@@ -42,15 +42,6 @@ Components.prototype._loadComponents = function($parent) {
 		});
 	}
 
-	// One page js
-	var $scrollMagic = $parent.find('[data-magic]');
-	if ($scrollMagic.length) {
-		var scrollMagic = require('./components/scrollMagic');
-		$scrollMagic.each(function() {
-			new scrollMagic($(this));
-		});
-	}
-
 
 
 };
@@ -78,7 +69,7 @@ module.exports = new Components();
 		});
 
 		window.onload=function(){
-			s.refresh()
+			s.refresh();
 		};
 
 
