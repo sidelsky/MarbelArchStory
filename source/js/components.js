@@ -33,23 +33,16 @@ Components.prototype._loadComponents = function($parent) {
 		});
 	}
 
-	// One page js
-	var $onePage = $parent.find('[data-one-page]');
-	if ($onePage.length) {
-		var OnePage = require('./components/onePage');
-		$onePage.each(function() {
-			new OnePage($(this));
-		});
-	}
-
-
-
 };
 
 module.exports = new Components();
 
 
 (function(){
+
+    var windowWidth = $(window).width();
+
+    //if(windowWidth > 1024){
 
 	var s = skrollr.init({
 		forceHeight: false,
@@ -72,11 +65,13 @@ module.exports = new Components();
 			s.refresh();
 		};
 
+    //}
+
 
 
 		// Setup variables
 		$window = $(window);
-		$slide = $('.homeSlide');
+		$slide = $('.scene-bg');
 		$body = $('body');
 
 		//FadeIn all sections

@@ -1022,7 +1022,8 @@ strong {
   left: 0;
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  min-height: 100%; }
 
 .scene-bg--1 {
   z-index: -1; }
@@ -1431,7 +1432,6 @@ p {
   padding-left: 10px; }
 
 .sub-image-cation {
-  background-color: #fff;
   color: #000; }
 
 .caption {
