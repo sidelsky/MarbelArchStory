@@ -2638,7 +2638,7 @@ module.exports = new Components();
 
     var windowWidth = $(window).width();
 
-    //if(windowWidth > 1024){
+    if(windowWidth > 660){
 
 	var s = skrollr.init({
 		forceHeight: false,
@@ -2661,7 +2661,7 @@ module.exports = new Components();
 			s.refresh();
 		};
 
-    //}
+    }
 
 
 
@@ -2954,7 +2954,7 @@ var $example = $('.js-see-me-example');
 $example.each(function(i, elem) {
   exampleInstance = new Example($(elem));
 });
-}).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_f3c9b18d.js","/")
+}).call(this,require("b55mWE"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_799f3f89.js","/")
 },{"./animations":10,"./components":11,"./components/example":12,"./uiEvents":16,"./utilities":17,"b55mWE":5,"buffer":4}],16:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 

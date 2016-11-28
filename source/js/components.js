@@ -42,7 +42,7 @@ module.exports = new Components();
 
     var windowWidth = $(window).width();
 
-    //if(windowWidth > 1024){
+    if(windowWidth > 660){
 
 	var s = skrollr.init({
 		forceHeight: false,
@@ -65,7 +65,7 @@ module.exports = new Components();
 			s.refresh();
 		};
 
-    //}
+    }
 
 
 
